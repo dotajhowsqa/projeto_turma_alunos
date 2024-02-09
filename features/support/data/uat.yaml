@@ -1,0 +1,7 @@
+validacao_text:
+  - text:
+    - 'Somos uma organização sem fins lucrativos com a missão de oferecer uma educação gratuita de alta qualidade para qualquer pessoa, em qualquer lugar.'
+    profiles:
+      - text_pagina_inicial
+    systems:
+      - khan

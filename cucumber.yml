@@ -1,0 +1,32 @@
+---
+
+default: --no-source --color --format pretty --format html --out report.html
+default: --publish-quiet --profile pretty
+pretty: --format pretty
+progress: --format progress
+
+# Browsers
+firefox: BROWSER=firefox
+chrome: BROWSER=chrome
+internet_explorer: BROWSER=internet_explorer
+edge: BROWSER=edge
+safari: BROWSER=safari
+ie: BROWSER=ie
+mobile_emulation: BROWSER=mobile
+headless: HEADLESS=true
+desktop: -p chrome
+
+# Ambientes
+uat: AMBIENTE=uat
+prd: AMBIENTE=prd
+
+# Mobile
+mobile_nexus5: -p json_report -p html_report -p mobile_emulation DEVICE=Nexus_5
+mobile_nexus10: -p json_report -p html_report -p mobile_emulation DEVICE=Nexus_10
+mobile_galaxy_s5: -p json_report -p html_report -p mobile_emulation DEVICE=Galaxy_S5
+mobile_iphone6: -p json_report -p html_report -p mobile_emulation DEVICE=iPhone_6
+mobile_iphone6_plus: -p json_report -p html_report -p mobile_emulation DEVICE=iPhone_6_Plus
+mobile_ipad: -p json_report -p html_report -p mobile_emulation DEVICE=iPad
+mobile: -p mobile_galaxy_s5
+app_emulation: -p mobile RESOLUTION=360x640 USER_AGENT=AppMobile
+desktop_emulation: -p mobile RESOLUTION=1366x1024 USER_AGENT=AppMobile

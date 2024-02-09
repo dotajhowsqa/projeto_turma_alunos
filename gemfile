@@ -1,0 +1,14 @@
+source "https://rubygems.org"
+
+gem 'selenium-webdriver'
+gem 'capybara'
+gem 'cucumber'
+gem 'rspec-wait'
+gem 'site_prism'
+gem 'cpf_faker'
+gem 'ostruct'
+gem 'rspec'
+gem 'faker'
+gem 'pry'
+gem 'dsl'
+gem 'clipboard'
