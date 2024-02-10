@@ -28,18 +28,18 @@ options.add_argument('--window-size=1530,860')
 
 Capybara.default_max_wait_time = 20
 Capybara.register_driver :selenium do |app|
-
-if BROWSER.eql?('chrome')
-    Capybara::Selenium::Driver.new(app, browser: :chrome, options: options)
-elsif BROWSER.eql?('firefox')
-    Capybara::Selenium::Driver.new(app, :browser => :firefox, :marionette =>true)
-elsif BROWSER.eql?('ie')
-    Capybara::Selenium::Driver.new(app, :browser => :internet_explorer)
-elsif BROWSER.eql?('safari')
-    Capybara::Selenium::Driver.new(app, :browser => :safari)
-elsif BROWSER.eql?('poltergeist')
-    obtions = { js_errors: false}
-    Capybara::Poltergeist::Driver.new(app, obtions)
+    
+    if BROWSER.eql?('chrome')
+        Capybara::Selenium::Driver.new(app, browser: :chrome, options: options)
+    elsif BROWSER.eql?('firefox')
+        Capybara::Selenium::Driver.new(app, :browser => :firefox, :marionette =>true)
+    elsif BROWSER.eql?('ie')
+        Capybara::Selenium::Driver.new(app, :browser => :internet_explorer)
+    elsif BROWSER.eql?('safari')
+        Capybara::Selenium::Driver.new(app, :browser => :safari)
+    elsif BROWSER.eql?('poltergeist')
+        obtions = { js_errors: false}
+        Capybara::Poltergeist::Driver.new(app, obtions)
     end
 end
 

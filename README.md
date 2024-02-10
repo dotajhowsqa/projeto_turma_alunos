@@ -64,3 +64,20 @@ Identificação precoce de problemas: Os testes automatizados ajudam a identific
 - Os steps devem fazer apenas o que se propõem, nada a mais, nada a menos
 - Prezar pelo reaproveitamento dos steps
 ```
+
+# Iniciar todos os contêineres definidos no arquivo docker-compose.yml
+```sh
+$ docker-compose up
+```
+# Iniciar um contêiner específico e remover os contêineres existentes
+```sh
+$ docker-compose up -d
+```
+# Parar todos os contêineres em execução
+```sh
+$ docker-compose down
+```
+# Verificar o status dos contêineres em execução
+```sh
+$ docker-compose ps
+```
