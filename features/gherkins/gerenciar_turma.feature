@@ -23,11 +23,3 @@ Funcionalidade: Gerenciamento de Turmas
     Quando o professor adicinar curso a turma
     E clicar em criar recomendacoes 
     Então selecionar os conteudos
-
-  @aluno_selecionar_turma
-  Cenário: Aluno selecionar uma turma
-    Dado preencher os dados Aluno
-    E clicar em entrar
-    E o Aluno clica em entrar nova turma
-    Quando o professor preenche os detalhes da turma
-    Então a turma deve ser criada com sucesso

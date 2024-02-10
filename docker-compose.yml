@@ -1,0 +1,14 @@
+version: '3'
+services:
+  app:
+    build: .
+    volumes:
+      - .:/app
+    environment:
+      - DISPLAY=:99 # Configuração para executar o Selenium em um ambiente sem GUI
+    depends_on:
+      - selenium
+  selenium:
+    image: selenium/standalone-chrome:latest
+    ports:
+      - "4444:4444"
